@@ -1,0 +1,111 @@
+/* Footer */
+footer {
+  height: auto; /* Let height adjust based on content */
+  
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  padding: 20px; /* Add padding for mobile devices */
+  position: relative;
+  top: 80px;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.footer > div {
+  margin-bottom: 20px;
+}
+
+.about {
+  white-space: normal;
+  word-break: break-all;
+  width: 25%;
+  text-align: left;
+}
+
+.about h4 {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.about p {
+  margin: 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: keep-all;
+}
+
+.logo {
+  margin: 20px 0;
+}
+
+.logo img {
+  max-width: 200px;
+  width: 100%; /* Make image responsive */
+  height: auto;
+}
+
+.s-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.socialapp a {
+  margin: 0 10px;
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.socialapp a:hover {
+  transform: scale(1.8);
+  color: rgba(255, 255, 255, 1);
+}
+
+.socialapp p {
+  margin-top: 10px;
+  font-size: 0.8em;
+}
+
+.s-logo i:hover {
+  max-width: 70px;
+}
+
+/* Media Query for tablets and small screens */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column; /* Stack the content vertically */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .about, .logo, .socialapp {
+    width: 100%; /* Full width for each section */
+    margin-bottom: 20px;
+  }
+
+  .about {
+    text-align: center; /* Center text on small screens */
+  }
+
+  .about h4 {
+    font-size: 1.2em; /* Slightly larger font size for better readability */
+  }
+
+  .socialapp a {
+    font-size: 1.3em; /* Adjust size of social icons */
+  }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 480px) {
+  .about h4 {
+    font-size: 1em; /* Adjust heading font size for smaller screens */
+  }
+
+  .socialapp a {
+    font-size: 1.2em; /* Adjust size of social icons further for mobile */
+  }
+}

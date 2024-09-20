@@ -1,0 +1,69 @@
+.oval {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vw 0; /* Use viewport width for responsive padding */
+}
+
+.oval .worktogether {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.oval .worktogether h1 {
+  transition: all 0.3s ease;
+  font-size: 3em; /* Base font size */
+}
+
+.oval .worktogether h1:hover {
+  font-size: 3.5em; /* Increased hover size */
+}
+
+.oval .icons {
+  display: flex; /* Ensure icons are laid out in a row */
+  justify-content: center;
+  margin-top: 20px; /* Space between text and icons */
+}
+
+.oval .icons a {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.oval .icons a:hover {
+  transform: scale(1.2);
+  color: #007BFF; /* Example hover color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .oval .worktogether h1 {
+      font-size: 2.5em; /* Smaller font size for tablets */
+  }
+
+  .oval .worktogether h1:hover {
+      font-size: 3em; /* Smaller hover size */
+  }
+
+  .oval .icons a {
+      font-size: 1.2em; /* Smaller icons */
+      margin: 0 5px; /* Reduced margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .oval .worktogether h1 {
+      font-size: 1.5em; /* Even smaller font size for mobile */
+  }
+
+  .oval .worktogether h1:hover {
+      font-size: 2em; /* Smaller hover size */
+  }
+
+  .oval .icons a {
+      font-size: 1em; /* Smallest icons */
+  }
+}

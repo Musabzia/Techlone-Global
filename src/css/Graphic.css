@@ -1,0 +1,223 @@
+.webbackground {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+  
+
+  
+.web-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+  
+.web-services a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+  
+.web-services a:hover {
+    color: rgb(101, 101, 236);
+}
+  
+.web-services img {
+    width: 35px;
+    height: auto;
+    padding: 5px 1em;
+    transition: transform 0.4s ease-in-out;
+}
+  
+.web-services img:hover {
+    transform: scale(1.1);
+}
+  
+.title-img {
+    background-image: url('../img/graphiccover.png'); /* Ensure correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+  
+.title-img h1 {
+    padding-top: 190px;
+    font-size: 18vh;
+    line-height: 90px;
+    text-align: center;
+}
+
+  /* Modal styles */
+
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .close-modal:hover {
+    transform: scale(1.2);
+  }
+  .side-by-side-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Optional: add space below the row */
+  }
+  
+  .side-by-side-images img {
+    width: 48%; /* Make each image take up roughly half of the container */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: add rounded corners */
+  }
+  
+  .slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden; /* Ensure no overflow from parent container */
+  }
+  
+  .left, .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: burlywood;
+    height: 200px;
+    width: 50px;
+    opacity: 0.4; /* Default opacity */
+    z-index: 3; /* Higher z-index to ensure it's above the pictures */
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    position: absolute; /* Position above pictures */
+    top: 0;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }
+  
+  .left i, .right i {
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+  }
+  
+  .left:hover, .right:hover {
+    opacity: 1;
+  }
+  
+  .left i:hover, .right i:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .center {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .webdev, .graphic {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 50%;
+    position: relative;
+    transition: transform 0.5s ease, z-index 0.5s ease, width 0.5s ease, opacity 0.5s ease;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  
+  .webdev:hover, .graphic:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    width: 60%;
+    opacity: 1; /* Change opacity on hover */
+  }
+  
+  .webdev:hover ~ .graphic, .graphic:hover ~ .webdev {
+    width: 50%;
+    z-index: 1;
+    
+  }
+  
+  .webdev {
+    background-image: url(../img/web-cover.png);
+  }
+  
+  .graphic {
+    background-image: url(../img/graphiccover.png);
+  }
+  
+  .webdev h1, .graphic h1 {
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    font-size: 2em;
+  }
+  
+  .webdev h1{
+    left: 55px;
+  }
+  .graphic h1{
+    left: 90px;
+  }
+  
+
+  
+
+
+  @media (max-width: 768px) {
+    .title-img h1 {
+      font-size: 6vh;
+    }
+  
+    .web-services img {
+      padding: 0.5em;
+      max-width: 100%;
+    }
+  
+    .oval {
+      font-size: 16px;
+    }
+  }
+  

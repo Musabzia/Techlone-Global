@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5vw 0; /* Use viewport width for responsive padding */
+  padding: 100px 0px; /* Use viewport width for responsive padding */
 }
 
 .oval .worktogether {

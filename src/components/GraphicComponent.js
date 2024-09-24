@@ -100,29 +100,7 @@ const GraphicComponent = () => {
           </div>
         </div>
 
-        <div className="slider-container">
-          <div className="left">
-            <a href="../pages/Website.js">
-              <FontAwesomeIcon icon={faChevronLeft} />
-            </a>
-          </div>
-
-          <div className="center">
-            <a href="../pages/Website.js" className="webdev">
-              <h1>Web Development</h1>
-            </a>
-
-            <a href="../pages/Grapics.js" className="graphic">
-              <h1>Artwork and Graphic Designing</h1>
-            </a>
-          </div>
-
-          <div className="right">
-            <a href="../pages/Grapics.js">
-              <FontAwesomeIcon icon={faChevronRight} />
-            </a>
-          </div>
-        </div>
+        
 
         {/* Footer */}
         <Footer />

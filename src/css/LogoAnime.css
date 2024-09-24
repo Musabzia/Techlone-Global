@@ -1,0 +1,17 @@
+.rotating-logo {
+    width: 55px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    animation: rotate 1.5s linear infinite; /* Apply rotation */
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* Rotate to 360 degrees */
+    }
+}

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5vw 0; /* Use viewport width for responsive padding */
+  padding: 100px 0; /* Use viewport width for responsive padding */
 }
 
 .oval .worktogether {
@@ -13,7 +13,7 @@
 
 .oval .worktogether h1 {
   transition: all 0.3s ease;
-  font-size: 3em; /* Base font size */
+  font-size: 30px; /* Base font size */
 }
 
 .oval .worktogether h1:hover {
@@ -27,11 +27,15 @@
 }
 
 .oval .icons a {
-  font-size: 1.5em;
-  color: #fff;
-  margin: 0 10px;
+  font-size: 1.2em;
+  background-color: #fff;
+  color: black;
+  padding: 10px 15px ;
+  border-radius: 50%;
+  margin: 0 20px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
+
 
 .oval .icons a:hover {
   transform: scale(1.2);

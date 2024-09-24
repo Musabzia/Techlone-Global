@@ -11,6 +11,7 @@ import webImg6 from '../img/app6.jpg';
 
 import Footer from '../components/FooterComponent'
 import Worktogether from '../components/Worktogether'
+import Slider from '../components/WebCompSlider';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,6 +21,20 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const AppComponent = () => {
+  const slides = [
+    {
+      title: 'Web Development',
+      image: webImg1, // Use actual images here
+      link: '/website',
+      className: 'webdev',
+    },
+    {
+      title: 'Artwork and Graphic Designing',
+      image: webImg2, // Use actual images here
+      link: '/graphics',
+      className: 'graphic',
+    }
+  ];
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState(null);
 
@@ -34,6 +49,7 @@ const AppComponent = () => {
     setModalImage(null);
     document.body.style.overflow = 'unset'; // Re-enable background scrolling
   };
+  
 
   useEffect(() => {
     AOS.init();
@@ -66,29 +82,8 @@ const AppComponent = () => {
         <Worktogether/>
 
         {/* Slider */}
-        <div className="slider-container">
-          <div className="left">
-            <a href="../pages/Website.js">
-            <i className="fas fa-chevron-left"></i>
-            </a>
-          </div>
-
-          <div className="center">
-            <a href="../pages/Website.js" className="webdev">
-              <h1>Web Development</h1>
-            </a>
-
-            <a href="../pages/Grapics.js" className="graphic">
-              <h1>Artwork and Graphic Designing</h1>
-            </a>
-          </div>
-
-          <div className="right">
-            <a href="../pages/Grapics.js">
-            <i className="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        </div>
+        <Slider slides={slides} />
+        
 
       
         {/* Footer */}

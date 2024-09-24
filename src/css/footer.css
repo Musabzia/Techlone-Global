@@ -8,7 +8,7 @@ footer {
   align-items: center;
   background-color: rgba(255, 255, 255, 0);
   color: #fff;
-  padding: 20px; /* Add padding for mobile devices */
+  padding: 50px 50px 50px 0; /* Add padding for mobile devices */
   position: relative;
   top: 80px;
   flex-wrap: wrap; /* Allow content to wrap on smaller screens */
@@ -38,7 +38,7 @@ footer {
 }
 
 .logo {
-  margin: 20px 0;
+  padding-right: 8vw;
 }
 
 .logo img {
@@ -84,6 +84,9 @@ footer {
   .about, .logo, .socialapp {
     width: 100%; /* Full width for each section */
     margin-bottom: 20px;
+  }
+  .logo{
+    padding: 0;
   }
 
   .about {

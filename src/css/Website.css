@@ -1,5 +1,5 @@
 /* General styles */
-.title-img {
+.webtitle-img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,8 +11,8 @@
   color: white;
 }
 
-.title-img h1 {
-  font-size: 8vh;
+.webtitle-img h1 {
+  font-size: 15vh;
   text-align: center;
 }
 
@@ -23,16 +23,17 @@
 }
 
 .web-services {
-  text-align: center;
-}
-
-.web-services p {
-  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center the images */
+  gap: 30px; /* Add space between images */
 }
 
 .web-services img {
-  max-width: 100%;
-  padding: 5em;
+  height: auto;
+  width: 70vw;
+  padding: 0;
   transition: transform 0.4s ease-in-out;
 }
 
@@ -72,4 +73,17 @@
 .close-modal:hover {
   transform: scale(1.2);
 }
+@media (max-width: 768px) {
+  .webtitle-img h1 {
+    font-size: 6vh;
+  }
 
+  .web-services img {
+    padding: 0.5em;
+    max-width: 100%;
+  }
+
+  .oval {
+    font-size: 16px;
+  }
+}

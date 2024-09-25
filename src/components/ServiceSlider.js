@@ -10,6 +10,9 @@ import appCover from '../img/AppCover.png';
 import graphicCover from '../img/graphiccover.png';
 import bitcoinCover from '../img/bitcoin.png';
 import illustrationCover from '../img/illustrationcover.png';
+import LogoAnime from '../components/LogoAnime';
+
+
 
 
 
@@ -23,6 +26,7 @@ const services = [
 ];
 
 const ServiceSlider = () => {
+  
   const [dragging, setDragging] = useState(false);
 
   const handleBeforeChange = () => {
@@ -68,9 +72,12 @@ const ServiceSlider = () => {
   };
 
   return (
-    <div className="service-slider-wrapper">
-      <div className="service-slider">
+    
 
+    <div className="service-slider-wrapper">
+      
+      <div className="service-slider">
+        <LogoAnime />
         <Slider {...settings}>
           {services.map((service) => (
             <div key={service.id} className="slide">

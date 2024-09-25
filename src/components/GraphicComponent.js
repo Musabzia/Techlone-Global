@@ -1,31 +1,51 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Graphic.css';
+import GraphicBackground from '../img/graphiccover.png';
+import BlockBackground from '../img/bitcoin.png';
+import AppBackground from '../img/AppCover.png';
 
-import WebBackground from '../img/landing.png';
-import logo from '../img/tech.png';
-import webImg1 from '../img/graphic12.png';
-import webImg2 from '../img/graphic8.png';
-import webImg3 from '../img/graphic.png';
-import webImg4 from '../img/graphic10.png';
-import webImg5 from '../img/graphic6.png';
-import webImg6 from '../img/graphic7.png';
-import webImg7 from '../img/graphic3.png';
-import webImg8 from '../img/graphic4.png';
-import webImg9 from '../img/graphic5.png';
-import webImg10 from '../img/graphic9.png';
-import webImg11 from '../img/graphic11.png';
-import webImg12 from '../img/graphic13.png';
+import graphicImg1 from '../img/graphic12.png';
+import graphicImg2 from '../img/graphic8.png';
+import graphicImg3 from '../img/graphic.png';
+import graphicImg4 from '../img/graphic10.png';
+import graphicImg5 from '../img/graphic6.png';
+import graphicImg6 from '../img/graphic7.png';
+import graphicImg7 from '../img/graphic3.png';
+import graphicImg8 from '../img/graphic4.png';
+import graphicImg9 from '../img/graphic5.png';
+import graphicImg10 from '../img/graphic9.png';
+import graphicImg11 from '../img/graphic11.png';
+import graphicImg12 from '../img/graphic13.png';
 
-import Footer from '../components/FooterComponent'
+import Footer from '../components/FooterComponent';
+import LogoAnime from '../components/LogoAnime';
+import Heading from '../components/Heading';
+import Worktogether from '../components/Worktogether';
+import Slider from '../components/WebCompSlider';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 const GraphicComponent = () => {
+
+  const slides = [
+    {
+      title: 'Application Development',
+      image: AppBackground, // Reference the imported image
+      link: '/application',
+      className: 'webdev',
+    },
+    {
+      title: 'Blockchain Development',
+      image: BlockBackground, // Reference the imported image
+      link: '/blockchain',
+      className: 'graphic',
+    },
+  ];
+
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState(null);
 
@@ -41,69 +61,50 @@ const GraphicComponent = () => {
     document.body.style.overflow = 'unset'; // Re-enable background scrolling
   };
 
-  const images = [
-    webImg1, webImg2, webImg3, webImg4,
-    webImg5, webImg6, webImg7, webImg8,
-    webImg9, webImg10, webImg11, webImg12
-  ];
   
+
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <>
-      <div className="title-img" style={{ backgroundImage: `url(${WebBackground})` }}>
-        <h1>Graphic Designing</h1>
+      <LogoAnime />
+      <div className="graphictitle-img" style={{ backgroundImage: `url(${GraphicBackground})` }}>
+        <h1 data-aos='fade-up' data-aos-easing="linear" data-aos-duration="1000">Graphic Designing</h1>
       </div>
 
-      <div className="web-container">
+      <div className="graphic-container">
         <div className="headings">
           <h1>At Techlone</h1>
           <p>Creativity meets strategy. Our designs aren't just visually stunning; they're crafted to amplify your brand's essence. We breathe life into ideas, translating them into captivating visuals that resonate and leave an indelible mark.</p>
         </div>
 
-        {/* Group of Side-by-Side Images */}
-        <div className="web-services">
+        <div className="graphic-services">
 
-          {images.map((img, index) => (
-            index % 2 === 0 && (
-              <div className="side-by-side-images" key={index}>
-                <a href="#!" onClick={() => openModal(images[index])}>
-                  <img src={images[index]} alt={`graphic ${index + 1}`} />
-                </a>
-                {images[index + 1] && (
-                  <a href="#!" onClick={() => openModal(images[index + 1])}>
-                    <img src={images[index + 1]} alt={`graphic ${index + 2}`} />
-                  </a>
-                )}
-                
-              </div>
-            )
+          {[graphicImg1, graphicImg2, graphicImg3, graphicImg4,
+            graphicImg5, graphicImg6, graphicImg7, graphicImg8,
+            graphicImg9, graphicImg10, graphicImg11, graphicImg12].map((img, index) => (
+
+            <a href="#!" key={index} onClick={() => openModal(img)}>
+
+              <img src={img} alt={`graphic ${index + 1}`} />
+
+              
+
+
+
+</a>
           ))}
-        </div>
+          {/* Worktogether */}
+          <Worktogether />
+          
+          {/* Slider */}
+          <Slider slides={slides} />
 
-        <div className="oval">
-          <a className="worktogether" href="https://techloneglobal.com/">
-            <h1>Let's work together</h1>
-          </a>
-
-          <div className="icons">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
+          {/* Footer */}
+          <Footer />
           </div>
-        </div>
-
-        
-
-        {/* Footer */}
-        <Footer />
 
         {modalOpen && (
           <div className="modal">

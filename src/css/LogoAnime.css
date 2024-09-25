@@ -5,6 +5,8 @@
     position: absolute;
     margin-top: 20px;
     margin-left: 20px;
+    cursor: pointer;
+    z-index: 99;
 }
 
 @keyframes rotate {

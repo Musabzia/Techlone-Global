@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import '../css/Illustration.css';
-import logo from '../img/tech.png';
-import WebBackground from '../img/illustrationcover.png';
-import webImg1 from '../img/01.png';
-import webImg2 from '../img/02.png';
-import webImg3 from '../img/03.png';
-import webImg4 from '../img/04.png';
-import webImg5 from '../img/07.png';
-import webImg6 from '../img/08.png';
+import '../css/Illustration.css'; 
+
+import illustrationBackground from '../img/illustrationcover.png';
+import BlockBackground from '../img/bitcoin.png';
+import twitchBackground from '../img/twitchcover.png';
+import illustrationImg1 from '../img/01.png';
+import illustrationImg2 from '../img/02.png';
+import illustrationImg3 from '../img/03.png';
+import illustrationImg4 from '../img/04.png';
+import illustrationImg5 from '../img/07.png';
+import illustrationImg6 from '../img/08.png';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
-import Footer from '../components/FooterComponent'
+import Footer from '../components/FooterComponent';
+import LogoAnime from '../components/LogoAnime';
+import Heading from '../components/Heading';
+import Worktogether from '../components/Worktogether';
+import Slider from '../components/WebCompSlider';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -24,12 +30,29 @@ const IllustrationComponent = () => {
   const openModal = (imgSrc) => {
     setModalImage(imgSrc);
     setModalOpen(true);
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
   };
 
   const closeModal = () => {
     setModalOpen(false);
     setModalImage(null);
+    document.body.style.overflow = 'unset'; // Re-enable background scrolling
   };
+
+  const slides = [
+    {
+      title: 'Blockchain Development',
+      image: BlockBackground, // Reference the imported image
+      link: '/blockchain',
+      className: 'webdev',
+    },
+    {
+      title: 'Twitch Services and Packages',
+      image: twitchBackground, // Reference the imported image
+      link: '/twitch',
+      className: 'graphic',
+    },
+  ];
 
   useEffect(() => {
     AOS.init();
@@ -37,47 +60,35 @@ const IllustrationComponent = () => {
 
   return (
     <>
-      <div className="title-img" style={{ backgroundImage: `url(${WebBackground})` }}>
+      <LogoAnime />
+      <div className="illustrationtitle-img" style={{ backgroundImage: `url(${illustrationBackground})` }}>
         <h1 data-aos='fade-up' data-aos-easing="linear" data-aos-duration="1000">Illustrations</h1>
       </div>
 
-      <div className="web-container">
-        <div className="headings">
-          <h1>At Techlone</h1>
-          <p>Creativity meets strategy. Our designs aren't just visually stunning; they're crafted to amplify your brand's essence. We breathe life into ideas, translating them into captivating visuals that resonate and leave an indelible mark.</p>
-        </div>
+      <div className="illustration-container">
+        {/* Heading */}
+          <Heading />
+          
+        
 
-        <div className="web-services">
-          {[webImg1, webImg2, webImg3, webImg4, webImg5, webImg6].map((img, index) => (
+        <div className="illustration-services">
+          {[illustrationImg1, illustrationImg2, illustrationImg3, illustrationImg4, illustrationImg5, illustrationImg6].map((img, index) => (
             <a href="#!" key={index} onClick={() => openModal(img)}>
               <img src={img} alt={`illustration ${index + 1}`} />
             </a>
           ))}
         </div>
 
-        <div className="oval">
-          <a className="worktogether" href="https://techloneglobal.com/">
-            <h1>Let's work together</h1>
-          </a>
-
-          <div className="icons">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
-          </div>
-        </div>
-
+        {/* Worktogether */}
+        <Worktogether />
         
+        {/* Slider */}
+        <Slider slides={slides} />
 
         {/* Footer */}
         <Footer />
 
+        {/* Modal */}
         {modalOpen && (
           <div className="modal">
             <span className="close-modal" onClick={closeModal}>

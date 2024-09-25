@@ -12,7 +12,9 @@ import Illustrations from './pages/Illustrations';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import webCover from './img/web-cover.png'; // Ensure these image paths are correct
+import LogoAnime from './components/LogoAnime'; // LogoAnime component
+
+import webCover from './img/web-cover.png';
 import graphicCover from './img/graphiccover.png';
 import twitchCover from './img/twitchcover.png';
 import blockchaincover from './img/bitcoin.png';
@@ -67,6 +69,8 @@ function App() {
     <>
       <Router>
         <div className="App">
+          
+          {/* Add the AnimatedCursor */}
           <AnimatedCursor
             innerSize={8}
             outerSize={8}
@@ -88,17 +92,22 @@ function App() {
               '.link'
             ]}
           />
-        </div>
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/twitch" element={<Twitch />} />
-            <Route path="/website" element={<Website />} />
-            <Route path="/application" element={<Application />} />
-            <Route path="/graphics" element={<Graphics />} />
-            <Route path="/blockchain" element={<Blockchain />} />
-            <Route path="/illustrations" element={<Illustrations />} />
-          </Routes>
+
+          {/* Add the LogoAnime component in the top-left corner */}
+          
+
+          <div className="container">
+            
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/twitch" element={<Twitch />} />
+              <Route path="/website" element={<Website />} />
+              <Route path="/application" element={<Application />} />
+              <Route path="/graphics" element={<Graphics />} />
+              <Route path="/blockchain" element={<Blockchain />} />
+              <Route path="/illustrations" element={<Illustrations />} />
+            </Routes>
+          </div>
         </div>
       </Router>
     </>

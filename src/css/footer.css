@@ -45,12 +45,18 @@ footer {
   max-width: 200px;
   width: 100%; /* Make image responsive */
   height: auto;
+  cursor: pointer;
 }
 
+.icons {
+  display: flex; /* Ensure icons are laid out in a row */
+  justify-content: center;
+}
 .s-logo {
   display: flex;
   justify-content: center;
 }
+
 
 .socialapp a {
   margin: 0 10px;
@@ -60,8 +66,8 @@ footer {
 }
 
 .socialapp a:hover {
-  transform: scale(1.8);
-  color: rgba(255, 255, 255, 1);
+  transform: scale(1.4);
+  color: #007BFF;
 }
 
 .socialapp p {

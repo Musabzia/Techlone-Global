@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Application.css';
 
-import WebBackground from '../img/AppCover.png';
-import logo from '../img/tech.png';
-import webImg1 from '../img/app1.jpg';
-import webImg2 from '../img/app2.jpg';
-import webImg3 from '../img/app7.jpg';
-import webImg5 from '../img/app5.jpg';
-import webImg6 from '../img/app6.jpg';
+import AppBackground from '../img/AppCover.png';
+import webcover from '../img/web-cover.png';
+import GraphicBackground from '../img/graphiccover.png';
+import AppImg1 from '../img/app1.jpg';
+import AppImg2 from '../img/app2.jpg';
+import AppImg3 from '../img/app7.jpg';
+import AppImg5 from '../img/app5.jpg';
+import AppImg6 from '../img/app6.jpg';
 
 import Footer from '../components/FooterComponent'
 import Worktogether from '../components/Worktogether'
 import Slider from '../components/WebCompSlider';
+import Heading from '../components/Heading';
+import LogoAnime from '../components/LogoAnime';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -24,13 +27,13 @@ const AppComponent = () => {
   const slides = [
     {
       title: 'Web Development',
-      image: webImg1, // Use actual images here
+      image: webcover, // Use actual images here
       link: '/website',
       className: 'webdev',
     },
     {
       title: 'Artwork and Graphic Designing',
-      image: webImg2, // Use actual images here
+      image: GraphicBackground, // Use actual images here
       link: '/graphics',
       className: 'graphic',
     }
@@ -57,21 +60,16 @@ const AppComponent = () => {
 
   return (
     <>
-      <div className="title-img" style={{ backgroundImage: `url(${WebBackground})` }}>
+    <LogoAnime />
+      <div className="apptitle-img" style={{ backgroundImage: `url(${AppBackground})` }}>
         <h1 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">Application Development</h1>
       </div>
 
-      <div className="web-container">
-        <div className="headings">
-          <h1>At Techlone</h1>
-          <p>
-            Innovation meets mobility with Techlone Global's Mobile App Design. We architect intuitive interfaces that captivate. 
-            Our designs aren't just beautiful; they're crafted to enhance user experience, ensuring your app stands out in the palm of your users' hands.
-          </p>
-        </div>
+      <div className="app-container">
+        <Heading />
 
-        <div className="web-services">
-          {[webImg1, webImg2, webImg3, webImg5, webImg6].map((img, index) => (
+        <div className="app-services">
+          {[AppImg1, AppImg2, AppImg3, AppImg5, AppImg6].map((img, index) => (
             <a href="#!" key={index} onClick={() => openModal(img)} data-aos="fade-up" data-aos-duration="1000">
               <img src={img} alt={`app ${index + 1}`} />
             </a>

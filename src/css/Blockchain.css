@@ -1,72 +1,91 @@
-.webbackground {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  
-  
-  .web-services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .web-services a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .web-services a:hover {
-    color: rgb(101, 101, 236);
-  }
-  
-  .web-services img {
-    width: 75vw;
-    height: auto;
-    padding: 5px 1em;
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .web-services img:hover {
-    transform: scale(1.1);
-  }
-  
-  .title-img {
-    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
-  
-  .title-img h1 {
-    padding-top: 190px;
-    font-size: 18vh;
-    line-height: 90px;
-    text-align: center;
-  }
-  
+/* General styles */
+.blocktitle-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 
-  
-  
-  @media (max-width: 768px) {
-    .title-img h1 {
-      font-size: 6vh;
-    }
-  
-    .web-services img {
-      padding: 0.5em;
-      max-width: 100%;
-    }
-  
-    .oval {
-      font-size: 16px;
-    }
+.blocktitle-img h1 {
+  font-size: 15vh;
+  text-align: center;
+  line-height: 90px; /* Ensured proper spacing */
+}
+
+.block-container {
+  padding: 100px 0px;
+  background-color: black; /* Background for the container */
+  color: aliceblue; /* Text color */
+}
+
+.block-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.block-services img {
+  width: 70vw; /* Set width for images */
+  height: auto;
+  padding: 5px 1em;
+  transition: transform 0.4s ease-in-out;
+}
+
+.block-services img:hover {
+  transform: scale(1.1); /* Hover effect */
+}
+
+/* Modal styles */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.close-modal:hover {
+  transform: scale(1.2); /* Hover effect for close button */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .blocktitle-img h1 {
+    font-size: 6vh; /* Responsive font size */
   }
-  
+
+  .block-services img {
+    padding: 0.5em;
+    max-width: 100%;
+  }
+
+  .oval {
+    font-size: 16px; /* Adjusted font size */
+  }
+}

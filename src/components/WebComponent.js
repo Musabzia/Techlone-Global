@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Website.css';
 
-import cover from '../img/web-cover.png';
+import webcover from '../img/web-cover.png';
 import webImg1 from '../img/website1.png';
 import webImg2 from '../img/website2.png';
 import webImg3 from '../img/website3.png';
@@ -24,6 +24,7 @@ import LogoAnime from '../components/LogoAnime';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const WebComponent = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -51,20 +52,20 @@ const WebComponent = () => {
       title: 'Twitch Services and Packages',
       image: twitchSlider, // Reference the imported image
       link: '/twitch',
-      className: 'twitch',
+      className: 'webdev',
     },
     {
       title: 'Application Development',
       image: appCover, // Reference the imported image
       link: '/application',
-      className: 'application',
+      className: 'graphic',
     },
   ];
 
   return (
     <>
       <LogoAnime />
-      <div className="title-img" style={{ backgroundImage: `url(${cover})` }}>
+      <div className="webtitle-img" style={{ backgroundImage: `url(${webcover})` }}>
         <h1 data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
           Website Development
         </h1>

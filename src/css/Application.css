@@ -1,100 +1,103 @@
-.webbackground {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  
-  .web-services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .web-services a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .web-services a:hover {
-    color: rgb(101, 101, 236);
-  }
-  
-  .web-services img {
-    width: 75vw;
-    height: auto;
-    padding: 5px 1em;
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .web-services img:hover {
-    transform: scale(1.1);
-  }
-  
-  .title-img {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
-  
-  .title-img h1 {
-    font-size: 8vh;
-    text-align: center;
-  }
-
-  /* Modal styles */
-
-.modal {
+/* General styles */
+.apptitle-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  z-index: 1000;
+  color: white;
+}
+
+.apptitle-img h1 {
+  font-size: 15vh;
+  text-align: center;
+}
+
+.app-container {
+  padding: 100px 0; /* Vertical padding for the container */
+  background-color: black; /* Background for the container */
+  color: aliceblue; /* Text color */
+}
+
+.app-services {
+  display: flex; /* Flex layout for services */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items horizontally */
+  text-align: center; /* Center text */
+}
+
+.app-services p {
+  font-size: 1.5em; /* Text size for description */
+}
+
+.app-services a {
+  text-decoration: none; /* No underline for links */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.app-services a:hover {
+  color: rgb(101, 101, 236); /* Color change on hover */
+}
+
+.app-services img {
+  max-width: 75vw; /* Responsive width for images */
+  height: 90vh; /* Maintain aspect ratio */
+  padding: 50px; /* Padding around images */
+  transition: transform 0.4s ease-in-out; /* Smooth scaling transition */
+}
+
+.app-services img:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Modal styles */
+.modal {
+  display: flex; /* Center modal content */
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Fixed position */
+  z-index: 1000; /* High z-index for modal */
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
 }
 
 .modal-content {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 90%; /* Max width for modal content */
+  max-height: 90%; /* Max height for modal content */
 }
 
 .close-modal {
-  position: absolute;
+  position: absolute; /* Positioned within modal */
   top: 20px;
   right: 20px;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  font-size: 2rem; /* Font size for close icon */
+  color: white; /* Close icon color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s ease-in-out; /* Smooth transform */
 }
 
 .close-modal:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Scale effect on hover */
 }
 
- 
-  @media (max-width: 768px) {
-    .title-img h1 {
-      font-size: 6vh;
-    }
-  
-    .web-services img {
-      padding: 0.5em;
-      max-width: 100%;
-    }
-  
-    .oval {
-      font-size: 16px;
-    }
+/* Media Queries */
+@media (max-width: 768px) {
+  .apptitle-img h1 {
+    font-size: 6vh; /* Responsive font size for title */
   }
-  
+
+  .web-services img {
+    padding: 0.5em; /* Reduced padding for images */
+    max-width: 100%; /* Max width for smaller screens */
+  }
+
+  .oval {
+    font-size: 16px; /* Adjusted font size */
+  }
+}

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Blockchain.css';
-import logo from '../img/tech.png';
-import WebBackground from '../img/bitcoin.png';
+import BlockBackground from '../img/bitcoin.png';
+import illustrationBackground from '../img/illustrationcover.png';
+import GraphicBackground from '../img/graphiccover.png';
 import blockImg1 from '../img/blockchain3.png';
 import blockImg2 from '../img/blockchain1.jpg';
 import blockImg3 from '../img/blockchain2.png';
@@ -12,7 +13,10 @@ import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-s
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Footer from '../components/FooterComponent'
+import Footer from '../components/FooterComponent';
+import LogoAnime from '../components/LogoAnime';
+import Worktogether from '../components/Worktogether';
+import Slider from '../components/WebCompSlider';
 
 const BlockchainComponent = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -21,12 +25,29 @@ const BlockchainComponent = () => {
   const openModal = (imgSrc) => {
     setModalImage(imgSrc);
     setModalOpen(true);
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
   };
 
   const closeModal = () => {
     setModalOpen(false);
     setModalImage(null);
+    document.body.style.overflow = 'unset'; // Re-enable background scrolling
   };
+
+  const slides = [
+    {
+      title: 'Artwork and Graphic Design',
+      image: GraphicBackground, // Reference the imported image
+      link: '/graphics',
+      className: 'webdev',
+    },
+    {
+      title: 'Illustration and Digital Sketches',
+      image: illustrationBackground, // Reference the imported image
+      link: '/illustration',
+      className: 'graphic',
+    },
+  ];
 
   useEffect(() => {
     AOS.init();
@@ -34,17 +55,20 @@ const BlockchainComponent = () => {
 
   return (
     <>
-      <div className="title-img" style={{ backgroundImage: `url(${WebBackground})` }}>
-        <h1 data-aos='fade-up' data-aos-easing="linear" data-aos-duration="1000">Blockchain <br />Development</h1>
+      <LogoAnime />
+      <div className="blocktitle-img" style={{ backgroundImage: `url(${BlockBackground})` }}>
+        <h1 data-aos='fade-up' data-aos-easing="linear" data-aos-duration="1000">
+          Blockchain <br />Development
+        </h1>
       </div>
 
-      <div className="web-container">
+      <div className="block-container">
         <div className="headings">
           <h1>At Techlone</h1>
           <p>Embrace the future of technology with expert blockchain development services. Whether you're a startup exploring blockchain opportunities or an established enterprise seeking to optimize your operations, we have the expertise and resources to bring your vision to life. Get in touch with us today to discuss your blockchain project requirements and take the first step towards innovation and success.</p>
         </div>
 
-        <div className="web-services">
+        <div className="block-services">
           {[blockImg1, blockImg2, blockImg3, blockImg4].map((img, index) => (
             <a href="#!" key={index} onClick={() => openModal(img)}>
               <img src={img} alt={`blockchain ${index + 1}`} />
@@ -52,26 +76,15 @@ const BlockchainComponent = () => {
           ))}
         </div>
 
-        <div className="oval">
-          <a className="worktogether" href="https://techloneglobal.com/">
-            <h1>Let's work together</h1>
-          </a>
+        {/* WorkTogether */}
 
-          <div className="icons">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
-          </div>
-        </div>
+        <Worktogether />
 
-        
-        {/* Footer */}
+        {/* Slider */}
+
+        <Slider slides={slides} />
+
+
         <Footer />
 
         {modalOpen && (

@@ -1,54 +1,52 @@
-.webbackground {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .web-services {
+.twitchtitle-img {
+    
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.twitchtitle-img h1 {
+  font-size: 15vh;
+  text-align: center;
+}
+.twitch-container {
+  padding: 100px 0px;
+  background-color: black;
+  color: aliceblue;
+}
+  .twitch-services {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
   
-  .web-services a {
+  .twitch-services a {
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
-  .web-services a:hover {
+  .twitch-services a:hover {
     color: rgb(101, 101, 236);
   }
   
-  .web-services img {
+  .twitch-services img {
     width: 75vw;
     height: auto;
     padding: 5px 1em;
     transition: transform 0.4s ease-in-out;
   }
   
-  .web-services img:hover {
+  .twitch-services img:hover {
     transform: scale(1.1);
   }
   
-  .title-img {
-    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
   
-  .title-img h1 {
-    padding-top: 190px;
-    font-size: 18vh;
-    line-height: 90px;
-    text-align: center;
-  }
   
   
   /* Modal styles */
@@ -89,11 +87,11 @@
   
   
   @media (max-width: 768px) {
-    .title-img h1 {
+    .twitchtitle-img h1 {
       font-size: 6vh;
     }
   
-    .web-services img {
+    .twitch-services img {
       padding: 0.5em;
       max-width: 100%;
     }

@@ -1,71 +1,84 @@
-.webbackground {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
- 
-  
-  .web-services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .web-services a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .web-services a:hover {
-    color: rgb(101, 101, 236);
-  }
-  
-  .web-services img {
-    width: 75vw;
-    height: auto;
-    padding: 5px 1em;
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .web-services img:hover {
-    transform: scale(1.1);
-  }
-  
-  .title-img {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
-  
-  .title-img h1 {
-    font-size: 8vh;
-    text-align: center;
-  }
-  
-  
+/* General styles */
+.illustrationtitle-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 
-  
+.illustrationtitle-img h1 {
+  font-size: 15vh;
+  text-align: center;
+}
 
-  
-  @media (max-width: 768px) {
-    .title-img h1 {
-      font-size: 6vh;
-    }
-  
-    .web-services img {
-      padding: 0.5em;
-      max-width: 100%;
-    }
-  
-    .oval {
-      font-size: 16px;
-    }
+.illustration-container {
+  padding: 100px 0px;
+  background-color: black;
+  color: aliceblue;
+}
+
+.illustration-services {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.illustration-services img {
+  max-width: 75vw; /* Make it responsive */
+  padding: 5px 1em;
+  transition: transform 0.4s ease-in-out;
+}
+
+.illustration-services img:hover {
+  transform: scale(1.1);
+}
+
+/* Modal styles */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.close-modal:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .illustrationtitle-img h1 {
+    font-size: 6vh;
   }
-  
+
+  .illustration-services img {
+    padding: 0.5em;
+    max-width: 100%;
+  }
+}

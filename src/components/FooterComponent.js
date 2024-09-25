@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from '../img/tech.png';
 import '../css/footer.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 const FooterComponent = () => {
   return (
     <footer>
@@ -11,7 +14,9 @@ const FooterComponent = () => {
       </div>
 
       <div className="logo">
+        <a href='/'>
         <img src={logo} alt="Techlone Global Logo" />
+        </a>
       </div>
 
       <div className="socialapp">
@@ -21,6 +26,22 @@ const FooterComponent = () => {
           <a href="https://www.linkedin.com/company/unavailable/"><i className="fab fa-linkedin"></i></a>
         </div>
         <br />
+
+        <div className="icons">
+        
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <FontAwesomeIcon icon={faFacebookF} />
+        </a>
+
+        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <FontAwesomeIcon icon={faTwitter} />
+        </a>
+
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <FontAwesomeIcon icon={faLinkedinIn} />
+        </a>
+
+      </div>
         <p>Copyright 2024 / All rights reserved<br />Designed by Techlone</p>
       </div>
     </footer>

@@ -1,119 +1,92 @@
-.webbackground {
-    width: 100%;
-    height: auto;
-    display: block;
+/* General styles */
+.graphictitle-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
-  
 
-  
-.web-services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;    
+.graphictitle-img h1 {
+  font-size: 15vh;
+  text-align: center;
 }
-  
-.web-services a {
-  text-decoration: none;
-  transition: color 0.3s ease;
+
+.graphic-container {
+  padding: 100px 0px;
+  background-color: black;
+  color: aliceblue;
 }
-  
-.web-services a:hover {
-    color: rgb(101, 101, 236);
+
+.graphic-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
-  
-.web-services img {
-    width: 35px;
-    height: auto;
-    padding: 5px 1em;
-    transition: transform 0.4s ease-in-out;
+
+.graphic-services img {
+  width: 28vw; /* Adjust as needed */
+  height: auto;
+  padding: 5px 1em;
+  transition: transform 0.4s ease-in-out;
 }
-  
-.web-services img:hover {
-    transform: scale(1.1);
+
+.graphic-services img:hover {
+  transform: scale(1.1);
 }
-  
-.title-img {
-    background-image: url('../img/graphiccover.png'); /* Ensure correct path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
+
+/* Modal styles */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.close-modal:hover {
+  transform: scale(1.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .graphictitle-img h1 {
+    font-size: 6vh;
+  }
+  .graphic-services {
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: white;
-}
-  
-.title-img h1 {
-    padding-top: 190px;
-    font-size: 18vh;
-    line-height: 90px;
     text-align: center;
-}
-
-  /* Modal styles */
-
-  .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
   }
-  
-  .modal-content {
-    max-width: 90%;
-    max-height: 90%;
-  }
-  
-  .close-modal {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .close-modal:hover {
-    transform: scale(1.2);
-  }
-  .side-by-side-images {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; /* Optional: add space below the row */
-  }
-  
-  .side-by-side-images img {
-    width: 48%; /* Make each image take up roughly half of the container */
-    max-width: 100%;
+  .graphic-services img {
     height: auto;
-    border-radius: 8px; /* Optional: add rounded corners */
+    width: 70vw;
+    padding: 0.5em;
+    max-width: 100%;
   }
-  
-  
-  
-
-
-  @media (max-width: 768px) {
-    .title-img h1 {
-      font-size: 6vh;
-    }
-  
-    .web-services img {
-      padding: 0.5em;
-      max-width: 100%;
-    }
-  
-    .oval {
-      font-size: 16px;
-    }
-  }
-  
+}

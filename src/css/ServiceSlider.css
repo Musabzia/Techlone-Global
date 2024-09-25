@@ -1,8 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  box-sizing: border-box;
   font-family: 'Poppins-Bold', sans-serif; 
+
 }
 @font-face {
   font-family: 'Poppins Bold';
@@ -13,6 +19,7 @@ html, body {
 
 
 .service-slider-wrapper {
+  
   overflow: hidden;
   position: relative;
 }
@@ -29,6 +36,7 @@ html, body {
 
 
 .slide img {
+  
   height: 100vh;
   width: 100%;
   height: 100%;

@@ -1,8 +1,8 @@
 .headings {
     text-align: center;
-    padding: 50px 0px;
+    padding: 0px 0px 100px 0px;
     margin: 0 auto;
-    max-width: 800px; /* Center and limit width */
+    width: 120vh;
     color: #fff; /* Text color */
     
   }
@@ -14,13 +14,17 @@
   }
   
   .headings p {
-    font-size: 1.5em; /* Slightly larger font for paragraph */
-    line-height: 1.5; /* Improved line height for readability */
+    font-size: 1.5em; 
+    line-height: 1.5; 
     
   }
   
   /* Responsive Styles */
   @media (max-width: 768px) {
+    .headings{
+      width: 60vw;
+      padding: 0px 0px 100px 0px;
+    }
     .headings h1 {
       font-size: 2em; /* Smaller font size on smaller screens */
     }

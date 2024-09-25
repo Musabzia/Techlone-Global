@@ -17,7 +17,8 @@
 }
 
 .oval .worktogether h1:hover {
-  font-size: 3.5em; /* Increased hover size */
+  font-size: 2.2em; /* Increased hover size */
+  color:  #007BFF;
 }
 
 .oval .icons {

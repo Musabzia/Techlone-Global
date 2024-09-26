@@ -54,37 +54,41 @@
 }
 
 /* Modal styles */
+/* Modal styles */
 .modal {
-  display: flex; /* Center modal content */
+  display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed; /* Fixed position */
-  z-index: 1000; /* High z-index for modal */
+  position: fixed;
+  z-index: 1000;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer; /* Add cursor style for the modal */
 }
 
 .modal-content {
-  max-width: 90%; /* Max width for modal content */
-  max-height: 90%; /* Max height for modal content */
+  max-width: 90%;
+  max-height: 90%;
+  cursor: auto; /* Default cursor for the image */
 }
 
 .close-modal {
-  position: absolute; /* Positioned within modal */
+  position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 2rem; /* Font size for close icon */
-  color: white; /* Close icon color */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: transform 0.3s ease-in-out; /* Smooth transform */
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
 .close-modal:hover {
-  transform: scale(1.2); /* Scale effect on hover */
+  transform: scale(1.2);
 }
+
 
 /* Media Queries */
 @media (max-width: 768px) {

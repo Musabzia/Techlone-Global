@@ -44,7 +44,7 @@ const BlockchainComponent = () => {
     {
       title: 'Illustration and Digital Sketches',
       image: illustrationBackground, // Reference the imported image
-      link: '/illustration',
+      link: '/illustrations',
       className: 'graphic',
     },
   ];

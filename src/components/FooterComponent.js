@@ -29,11 +29,11 @@ const FooterComponent = () => {
 
         <div className="icons">
         
-        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <a href="https://www.facebook.com/techlonglobal" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <FontAwesomeIcon icon={faFacebookF} />
         </a>
 
-        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <a href="https://x.com/Techlone_Global" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
           <FontAwesomeIcon icon={faTwitter} />
         </a>
 
